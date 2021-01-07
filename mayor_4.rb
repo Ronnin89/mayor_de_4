@@ -33,13 +33,29 @@ fourth = ARGV[3].to_i
 #     end
 # end
 
-if fourth != ""
-    puts first if first > second && first > third && first > fourth
-    puts second if second > first && second > third && second > fourth
-    puts third if third > first && third > second && third > fourth
-    puts fourth if fourth > first && fourth > second && fourth > third
-else
-    puts first if first > second && first > third
-    puts second if second > first && second > third
-    puts third if third > first && third > second
-end
+
+# res = 0
+# if fourth != ""
+#     res = first if first > second && first > third && first > fourth
+#     res = second if second > first && second > third && second > fourth
+#     res = third if third > first && third > second && third > fourth
+#     res = fourth if fourth > first && fourth > second && fourth > third
+# else
+#     res = first if first > second && first > third
+#     res = second if second > first && second > third
+#     res = third if third > first && third > second
+# end
+
+# puts res
+
+var1 = first
+var2 = third
+
+var1 = second if second > first
+var2 = fourth if fourth > third
+
+res = var1
+
+res = var2 if var2 > var1
+
+puts res
