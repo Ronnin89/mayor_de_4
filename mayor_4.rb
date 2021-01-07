@@ -48,14 +48,15 @@ fourth = ARGV[3].to_i
 
 # puts res
 
+# declaro variables temporales
 var1 = first
 var2 = third
-
+# comparacion de variables iniciales
 var1 = second if second > first
 var2 = fourth if fourth > third
-
+#creacion de variable para mostrar un resultado
 res = var1
-
+# comparacion de variables temporales 
 res = var2 if var2 > var1
-
+# mostrar resultado
 puts res
